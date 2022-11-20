@@ -15,7 +15,6 @@ class IconTab extends StatefulWidget {
 }
 
 const double _kTextAndIconTabHeight = 53.0;
-const double _kIconBottomMargin = 23.0;
 
 class IconTabState extends State<IconTab> {
   Widget _buildTitleText() {
@@ -31,13 +30,10 @@ class IconTabState extends State<IconTab> {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Container(
-          margin: const EdgeInsets.only(bottom: _kIconBottomMargin),
-          child: Image(
-            image: AssetImage(widget.icon),
-            height: 30.0,
-            width: 30.0,
-          ),
+        Image(
+          image: AssetImage(widget.icon),
+          height: 30.0,
+          width: 30.0,
         ),
         _buildTitleText()
       ],
