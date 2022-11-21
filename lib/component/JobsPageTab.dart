@@ -53,6 +53,27 @@ class JobList extends State<JobsTab> {
             "salary":"30k-40k",
             "username":"Fiona",
             "title":"HRBP"
+          },{
+            "name":"Android算法工程师1",
+            "cname":"腾讯头条1",
+            "size":"已上市1",
+            "salary":"30k-40k",
+            "username":"Fiona",
+            "title":"HRBP"
+          },{
+            "name":"Android算法工程师2",
+            "cname":"腾讯头条2",
+            "size":"已上市2",
+            "salary":"30k-40k",
+            "username":"Fiona",
+            "title":"HRBP"
+          },{
+            "name":"Android算法工程师3",
+            "cname":"腾讯头条3",
+            "size":"已上市3",
+            "salary":"30k-40k",
+            "username":"Fiona",
+            "title":"HRBP"
           }
         ]
       }
