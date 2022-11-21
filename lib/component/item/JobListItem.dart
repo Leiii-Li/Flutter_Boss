@@ -17,69 +17,58 @@ class JobListItem extends StatelessWidget {
         right: 5.0,
         bottom: 3.0,
       ),
-      child: SizedBox(
-        child: Card(
+      child: Card(
           elevation: 0.0,
-          child: Row(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
             children: [
-              Expanded(
-                  child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
+              Row(
                 children: [
-                  Row(
+                  Padding(
+                      padding: const EdgeInsets.only(
+                          top: 10.0, left: 10.0, bottom: 5.0),
+                      child: Text(
+                        _job.name,
+                        style: const TextStyle(color: Colors.red),
+                      )),
+                  Expanded(
+                      child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Padding(
-                          padding: const EdgeInsets.only(
-                              top: 10.0, left: 10.0, bottom: 5.0),
-                          child: Text(
-                            _job.name,
-                            style: const TextStyle(color: Colors.red),
-                          )),
-                      Expanded(
-                          child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(right: 10.0),
-                            child: Text(
-                              _job.salary,
-                              style: const TextStyle(color: Colors.white),
-                            ),
-                          )
-                        ],
-                      ))
+                        padding: const EdgeInsets.only(right: 10.0),
+                        child: Text(
+                          _job.salary,
+                          style: const TextStyle(color: Colors.black),
+                        ),
+                      )
                     ],
-                  ),
-                  Container(
-                    margin: const EdgeInsets.only(
-                        top: 5.0, left: 10.0, bottom: 5.0),
-                    child: Text(
-                      "${_job.cname}  ${_job.size}",
-                      style:
-                          const TextStyle(fontSize: 15.0, color: Colors.grey),
-                    ),
-                  ),
-                  const Divider(),
-                  Row(
-                    children: [
-                      Padding(
-                          padding: const EdgeInsets.only(
-                              top: 5.0, left: 10.0, right: 5.0, bottom: 15.0),
-                          child: Text(
-                            "${_job.username} | ${_job.title}",
-                            style:
-                                const TextStyle(color: Constant.mainThemeColor),
-                          ))
-                    ],
-                  )
+                  ))
                 ],
-              ))
+              ),
+              Container(
+                margin:
+                    const EdgeInsets.only(top: 5.0, left: 10.0, bottom: 5.0),
+                child: Text(
+                  "${_job.cname}  ${_job.size}",
+                  style: const TextStyle(fontSize: 15.0, color: Colors.grey),
+                ),
+              ),
+              const Divider(),
+              Row(
+                children: [
+                  Padding(
+                      padding: const EdgeInsets.only(
+                          top: 5.0, left: 10.0, right: 5.0, bottom: 15.0),
+                      child: Text(
+                        "${_job.username} | ${_job.title}",
+                        style: const TextStyle(color: Constant.mainThemeColor),
+                      ))
+                ],
+              )
             ],
-          ),
-        ),
-      ),
+          )),
     );
   }
 }
