@@ -9,13 +9,12 @@ class Job {
   final String username;
   final String title;
 
-  Job(
-      {required this.name,
-      required this.cname,
-      required this.size,
-      required this.salary,
-      required this.username,
-      required this.title});
+  Job({required this.name,
+    required this.cname,
+    required this.size,
+    required this.salary,
+    required this.username,
+    required this.title});
 
   static List<Job> fromJson(String json) {
     List<Job> jobList = [];
@@ -23,7 +22,7 @@ class Job {
     JsonDecoder decoder = const JsonDecoder();
     var mapData = decoder.convert(json);
 
-    mapData.forEach((obj) {
+    mapData['list'].forEach((obj) {
       Job job = Job(
         name: obj['name'],
         cname: obj['cname'],

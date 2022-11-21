@@ -45,7 +45,7 @@ class JobListItem extends StatelessWidget {
                             padding: const EdgeInsets.only(right: 10.0),
                             child: Text(
                               _job.salary,
-                              style: const TextStyle(color: Colors.red),
+                              style: const TextStyle(color: Colors.white),
                             ),
                           )
                         ],

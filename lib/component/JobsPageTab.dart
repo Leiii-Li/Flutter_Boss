@@ -17,6 +17,7 @@ class JobList extends State<JobsTab> {
   @override
   void initState() {
     super.initState();
+    getJobList();
   }
 
   void getJobList() {
@@ -28,17 +29,31 @@ class JobList extends State<JobsTab> {
             "name":"架构师(Android)",
             "cname":"蚂蚁金服",
             "size":"B轮",
-            "salary":"25k-45k"
-            "username":"Claire"
+            "salary":"25k-45k",
+            "username":"Claire",
             "title":"HR"
           },{
             "name":"资深Android工程师",
             "cname":"今日头条",
             "size":"D轮",
-            "salary":"40k-60k"
-            "username":"Kimi"
+            "salary":"40k-60k",
+            "username":"Kimi",
             "title":"HRBP"
-          },
+          },{
+            "name":"Android工程师",
+            "cname":"货拉拉",
+            "size":"D轮",
+            "salary":"18k-28k",
+            "username":"Author",
+            "title":"HRBP"
+          },{
+            "name":"Android算法工程师",
+            "cname":"腾讯头条",
+            "size":"已上市",
+            "salary":"30k-40k",
+            "username":"Fiona",
+            "title":"HRBP"
+          }
         ]
       }
       """);
