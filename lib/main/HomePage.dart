@@ -1,7 +1,10 @@
 import 'package:boss/common/Constant.dart';
+import 'package:boss/component/contacts/ContactsTab.dart';
+import 'package:boss/component/find/FindTab.dart';
+import 'package:boss/component/mine/MineTab.dart';
 import 'package:flutter/material.dart';
 import '../component/IconTab.dart';
-import '../component/JobsPageTab.dart';
+import '../component/job/JobsPageTab.dart';
 
 class BoosApp extends StatefulWidget {
   const BoosApp({super.key});
@@ -43,7 +46,12 @@ class HomeState extends State<BoosApp> with SingleTickerProviderStateMixin {
     return Scaffold(
       body: TabBarView(
         controller: _controller,
-        children: const <Widget>[JobsTab(), JobsTab(), JobsTab(), JobsTab()],
+        children: const <Widget>[
+          JobsTab(),
+          ContactsTab(),
+          FindTab(),
+          MineTab()
+        ],
       ),
       bottomNavigationBar: Material(
         color: Colors.white,
